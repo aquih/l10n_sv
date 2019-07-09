@@ -4,3 +4,5 @@
 # Copyright (c) 2009-2010 Soluciones Tecnologócias Prisma S.A. All Rights Reserved.
 # José Rodrigo Fernández Menegazzo, Soluciones Tecnologócias Prisma S.A.
 # (http://www.solucionesprisma.com)
+
+from . import models
