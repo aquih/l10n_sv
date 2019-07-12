@@ -7,4 +7,4 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     numero_registro = fields.Char('Registro')
-    giro_negocio_id = fields.Many2one('sv.giro_negocio', 'Giro')
+#    giro_negocio_id = fields.Many2one('sv.giro_negocio', 'Giro')
