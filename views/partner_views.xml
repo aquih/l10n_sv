@@ -9,6 +9,7 @@
                 <data>
                     <field name="vat" position="before">
                         <field name="numero_registro"/>
+                        <field name="consumidor_final"/>
                     </field>
                     <field name="vat" position="after">
                         <field name="giro_negocio_id"/>
