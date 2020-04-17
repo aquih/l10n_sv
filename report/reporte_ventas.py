@@ -21,12 +21,14 @@ class ReporteVentas(models.AbstractModel):
         journal_ids = [x for x in datos['diarios_id']]
         facturas = self.env['account.invoice'].search([
             ('state','in',['open','paid','cancel']),
+            ('type','in',['out_invoice','out_refund']),
             ('journal_id','in',journal_ids),
             ('date_invoice','<=',datos['fecha_hasta']),
             ('date_invoice','>=',datos['fecha_desde']),
             ('partner_id.consumidor_final','=',datos['resumido']),
         ], order='date_invoice, number')
 
+        logging.warn('HOLAAAAAAAAAAAAAAAAAAAAAAAAA MUNDOOOOOOOOOOOOOOOOO 2222222222')
         lineas = []
         correlativo = 1
         for f in facturas:
