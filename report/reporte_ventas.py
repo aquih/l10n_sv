@@ -28,7 +28,6 @@ class ReporteVentas(models.AbstractModel):
             ('partner_id.consumidor_final','=',datos['resumido']),
         ], order='date_invoice, number')
 
-        logging.warn('HOLAAAAAAAAAAAAAAAAAAAAAAAAA MUNDOOOOOOOOOOOOOOOOO 2222222222')
         lineas = []
         correlativo = 1
         for f in facturas:
@@ -63,9 +62,14 @@ class ReporteVentas(models.AbstractModel):
             if 'requiere_resolucion' in f.journal_id.fields_get() and f.journal_id.requiere_resolucion:
                 numero = f.name
 
+            if f.number:
+                serie = f.number[0:9]
+            else:
+                serie = ''
+
             linea = {
                 'correlativo': correlativo,
-                'serie': f.number[0:9],
+                'serie': serie,
                 'estado': f.state,
                 'tipo': tipo,
                 'fecha': f.date_invoice,
