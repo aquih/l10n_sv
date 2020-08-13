@@ -6,4 +6,4 @@
 # (http://www.solucionesprisma.com)
 
 from . import models
-from . import report
+# from . import report
