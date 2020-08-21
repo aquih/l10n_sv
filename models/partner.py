@@ -10,3 +10,4 @@ class Partner(models.Model):
     numero_registro = fields.Char('Registro')
     giro_negocio_id = fields.Many2one('sv.giro_negocio', 'Giro')
     consumidor_final = fields.Boolean('Consumidor final')
+    dui = fields.Char('DUI')

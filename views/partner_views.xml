@@ -12,6 +12,7 @@
                         <field name="consumidor_final"/>
                     </field>
                     <field name="vat" position="after">
+                        <field name="dui"/>
                         <field name="pequenio_contribuyente"></field>
                         <field name="giro_negocio_id"/>
                     </field>
