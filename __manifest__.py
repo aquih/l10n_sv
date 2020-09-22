@@ -36,6 +36,6 @@ Adds accounting chart for El Salvador. It also includes taxes.""",
         # 'views/reporte_ventas.xml',
         # 'views/reporte_compras.xml',
         # 'views/report.xml',
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
     ],
 }
